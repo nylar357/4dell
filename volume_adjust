@@ -1,0 +1,9 @@
+notify-send.py $(amixer set Master 10%+ | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1) -i /home/nylar/.config/tint2/images/vol-full.svg --hint :value:` amixer get Master | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1` --hint string:synchronous:volume`']`'])
+
+notify-send.py $(amixer set Master 10%- | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1) -i /home/nylar/.config/tint2/images/vol-medium.svg --hint :value:` amixer get Master | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1` --hint string:synchronous:volume`']`'])
+
+notify-send.py Mute $(pactl set-sink-mute 0 toggle) -i /home/nylar/.config/tint2/images/vol-muted.svg
+
+notify-send.py $(amixer set Master 5%+ | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1) -i /home/nylar/.config/tint2/images/vol-full.svg --hint :value:` amixer get Master | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1` --hint string:synchronous:volume`']`'])
+
+notify-send.py $(amixer set Master 5%- | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1) -i /home/nylar/.config/tint2/images/vol-lowest.svg --hint :value:` amixer get Master | grep -m 1 '%' | cut -d'[' -f2 | cut -d'%' -f1` --hint string:synchronous:volume`']`'])
